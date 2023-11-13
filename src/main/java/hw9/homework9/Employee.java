@@ -48,7 +48,7 @@ public class Employee {
     }
 
     public String toString() {
-        return "ФИО: " + getFirstName() + " " + getSecondName() + " отдел: " + department + " зарплата: " + salary;
+        return "ФИО: " + getFirstName() + " " + getSecondName() + ", отдел: " + department + ", зарплата: " + salary;
     }
 
 }
