@@ -1,19 +1,18 @@
 package hw9.homework9;
 
 public class Employee {
-    private String firstName;
-    private String secondName;
-    public String getFullName() {return firstName + " " + secondName;}
+    private final String firstName;
+    private final String secondName;
+    private final String department;
+    private final double salary;
 
 
 
-    public Employee(String firstName, String secondName) {
+    public Employee(String firstName, String secondName, String department, double salary) {
         this.firstName = firstName;
         this.secondName = secondName;
-    }
-    public Employee(Employee employee) {
-        this.firstName = employee.firstName;
-        this.secondName = employee.secondName;
+        this.department = department;
+        this.salary = salary;
     }
 
     public  String getFirstName() {
@@ -22,15 +21,15 @@ public class Employee {
     public String getSecondName() {
         return secondName;
     }
-    public void setFirstName(String firstName){
-        this.firstName = firstName;
+    public String getDepartment(){
+        return department;
     }
-    public void setSecondName(String secondName) {
-        this.secondName = secondName;
+    public double getSalary() {
+        return salary;
     }
 
     public String toString() {
-        return "ФИО: " + getFirstName() + " " + getSecondName();
+        return "ФИО: " + getFirstName() + " " + getSecondName() + ", отдел: " + department + ", зарплата: " + salary;
     }
 
 }
